@@ -1,0 +1,213 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- packages ----------
+\usepackage[top=2.2cm,bottom=2.4cm,left=2.2cm,right=2.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- palette ----------
+\definecolor{navy}{HTML}{16283F}
+\definecolor{accent}{HTML}{B31B1B}
+\definecolor{grey}{HTML}{5A5A5A}
+\definecolor{rule}{HTML}{C8CDD4}
+
+% ---------- section style ----------
+\titleformat{\section}
+  {\sffamily\bfseries\fontsize{11.5}{14}\selectfont\color{navy}}
+  {}{0em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{14pt}{5pt}
+
+% ---------- footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{{\color{rule}\hrule width\headwidth height\footrulewidth}}
+\fancyfoot[L]{\sffamily\scriptsize\color{grey}Saran Kirupakaran\quad|\quad Shell plc — Initiation of Coverage\quad|\quad July 2026}
+\fancyfoot[R]{\sffamily\scriptsize\color{grey}\thepage\ / \pageref{LastPage}}
+\usepackage{lastpage}
+
+% ---------- table helpers ----------
+\newcommand{\tabcaption}[1]{\par\vspace{6pt}{\sffamily\bfseries\footnotesize\color{navy}#1}\par\vspace{3pt}}
+\newcommand{\tabsource}[1]{\vspace{2pt}{\sffamily\scriptsize\color{grey}#1}\par\vspace{6pt}}
+\newcommand{\thead}[1]{{\sffamily\bfseries\footnotesize\color{navy}#1}}
+\renewcommand{\arraystretch}{1.25}
+
+% ---------- misc ----------
+\setlength{\parskip}{6pt}
+\newcommand{\about}{\raisebox{0.4ex}{\texttildelow}}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+{\sffamily\bfseries\fontsize{20}{24}\selectfont\color{navy}Shell plc}\\[3pt]
+{\sffamily\fontsize{11}{13}\selectfont\color{grey}LSE: SHEL \quad\textbullet\quad Initiation of Coverage \quad\textbullet\quad Integrated Energy}\\[2pt]
+{\sffamily\footnotesize\color{grey}Saran Kirupakaran \quad\textbullet\quad July 2026 \quad\textbullet\quad Price as of 3 July 2026 \quad\textbullet\quad DRAFT v1}
+\end{center}
+
+\vspace{2pt}
+{\color{navy}\hrule height 1.2pt}
+\vspace{8pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{}l X l X l X l@{}}
+\thead{Rating} & & \thead{Price target} & & \thead{Current price} & & \thead{Implied upside}\\
+{\sffamily\bfseries\large\color{accent}BUY} & & {\sffamily\bfseries\large 3,500 GBX} & & {\sffamily\large 2,891.5 GBX} & & {\sffamily\bfseries\large +21\%}\\[4pt]
+\thead{Market cap} & & \thead{Dividend yield} & & \thead{P/E (trailing)} & & \thead{EV/EBITDA (FY25)}\\
+{\sffamily\pounds160bn\,/\,\$217.5bn} & & {\sffamily 3.8\%} & & {\sffamily\about12x} & & {\sffamily\about4.8x}\\
+\end{tabularx}
+
+\vspace{8pt}
+{\color{rule}\hrule height 0.6pt}
+
+% ================= THESIS =================
+\section{Investment thesis}
+
+The market prices Shell as a business in terminal decline: roughly 4.8x EV/EBITDA and about a 10\% normalised free-cash-flow yield, the cheapest of the five supermajors and around half the multiple of its US peers. This report tests whether that discount is justified, using two independent approaches: a systematic climate transition risk model built by the author, and a bottom-up DCF on normalised free cash flow. Both point the same way. The transition-risk screen, which penalises Shell's discount rate for carbon intensity, fossil asset share and regulatory exposure, still finds the shares roughly 12\% below fair value. The DCF, run with a deliberately conservative negative terminal growth rate to encode reserve depletion, implies fair value near 3,800 GBX. Even stressing the discount rate to 9\% and shrinking the terminal business 2\% a year, the model does not produce today's price. The market is not just discounting decline; it is over-discounting it.
+
+Three near-term dynamics create the entry point. First, war-driven price spikes in H1~2026 pushed roughly \$11bn into working capital in a single quarter, collapsing reported free cash flow and driving net debt from \$45.7bn to \$52.6bn; this is largely mechanical and should partially unwind as prices normalise. Second, the buyback was trimmed and then paused ahead of the ARC Resources vote, removing the stock's most visible support and, in this view, temporarily depressing the price. Third, the \$16.4bn ARC acquisition (closing subject to a July 14 vote) directly attacks the bear case, adding gas production adjacent to LNG Canada and addressing a reserve replacement ratio that fell below 100\%. Initiate at \textbf{BUY}, price target \textbf{3,500 GBX} (DCF fair value of 3,800 GBX less an execution haircut for ARC integration and balance-sheet strain), approximately 21\% upside plus a 3.8\% dividend yield.
+
+% ================= OVERVIEW =================
+\section{Company overview}
+
+Shell is an integrated energy company operating through five segments. Integrated Gas (LNG production and trading) is the core engine: \$8.0bn of FY2025 adjusted earnings on only \$4.7bn of capex, generating roughly \$9.4bn of segment free cash flow. Upstream (oil and gas extraction) earned \$7.4bn but consumed \$9.3bn of capex, double any other segment, reflecting the cost of holding production flat in ageing fields. Marketing (fuel retail, lubricants) is the quiet compounder: \$4.0bn of earnings, minimal capital needs, and the least commodity-sensitive cash stream in the group. Chemicals \& Products (refining and chemicals) is the swing segment, earning \$1.1bn in FY2025 but \$1.9bn in Q1~2026 alone as war-driven refining margins spiked. Renewables \& Energy Solutions remains immaterial to group economics: \$0.2bn of earnings against \$1.9bn of capex, consuming cash. The uncomfortable arithmetic of Shell is that hydrocarbons fund everything, including the transition itself.
+
+\tabcaption{FY2025 segment economics (\$m; segment FCF = CFFO less cash capex)}
+\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
+\toprule
+\thead{Segment} & \thead{Adj. earnings} & \thead{CFFO} & \thead{Cash capex} & \thead{Segment FCF}\\
+\midrule
+Integrated Gas & 8,024 & 14,086 & (4,689) & 9,397\\
+Upstream & 7,442 & 19,573 & (9,316) & 10,257\\
+Marketing & 3,994 & 6,339 & (1,862) & 4,477\\
+Chemicals \& Products & 1,051 & 5,366 & (3,063) & 2,303\\
+Renewables \& Energy Solutions & 172 & 623 & (1,866) & (1,243)\\
+Corporate / eliminations & (1,870) & (3,123) & (119) & (3,242)\\
+\bottomrule
+\end{tabularx}
+\tabsource{Source: Shell Q4 2025 results release (SEC Form 6-K, February 2026); Q1 2026 quarterly databook.}
+
+% ================= ARC =================
+\section{The ARC Resources acquisition}
+
+In April 2026 Shell announced its largest deal since BG Group (2016): the acquisition of ARC Resources, one of Canada's largest gas producers, at a \$16.4bn enterprise value, paid roughly 25\% cash and 75\% in new Shell shares issued at a 20\% premium to ARC's 30-day average. ARC's shareholder vote is July 14, 2026 (66\% approval threshold). Strategically the logic is clean: ARC's Montney production sits adjacent to Shell's Canadian assets feeding LNG Canada (Shell: 40\%), whose cargoes reach Asian buyers faster than most North American LNG. The deal is a direct response to the group's weakest datapoint, a FY2025 reserves replacement ratio below 100\%, and doubles down on the Integrated Gas engine described above. The equity funding is dilutive (\about4\% more shares) but protects the balance sheet at a moment of elevated gearing; the market's muted reaction suggests it is treated as roughly value-neutral at deal price, which is the assumption adopted here. Risk case: integration distraction, and the signal that organic replacement can no longer sustain the portfolio.
+
+% ================= FINANCIALS =================
+\section{Financial analysis: the Q1 2026 divergence}
+
+Q1~2026 is the quarter that makes Shell's accounts worth reading closely. Adjusted earnings of \$6.9bn were the strongest in over a year, driven by war-spiked refining margins (Chemicals \& Products: \$1.9bn) and firm upstream realisations. Yet free cash flow collapsed to \$2.9bn, the weakest in the five-year dataset, and net debt jumped \$6.9bn in thirteen weeks, taking gearing from 20.7\% to 23.2\%. The reconciliation is working capital: operating cash flow before working capital was \$17.2bn, the strongest on record in the databook, but \$11.2bn was absorbed funding inventories and receivables that repriced upward with crude.
+
+This divergence frames the central question. The bear reading: distributions have now exceeded free cash flow for two consecutive quarters, gearing has risen \about5 points in a year, and the payout is being defended with debt precisely as the company takes on its largest acquisition in a decade. The bull reading, adopted here with qualifications: working-capital absorption is mechanically self-reversing when prices normalise, underlying cash generation is demonstrably intact, and management has already acted (buyback trimmed from \$3.5bn to \$3.0bn per quarter) rather than borrowing to pretend otherwise. The Q2 release (July 30) will show which reading is winning; a meaningful working-capital release would validate the bull case.
+
+\tabcaption{The Q1 2026 divergence (\$m)}
+\begin{tabularx}{\textwidth}{@{}X r r r@{}}
+\toprule
+ & \thead{Q1 2025} & \thead{Q4 2025} & \thead{Q1 2026}\\
+\midrule
+Adjusted earnings & 5,577 & 3,256 & 6,915\\
+CFFO excluding working capital & 11,944 & 8,164 & 17,241\\
+Working capital movement & (2,663) & 1,275 & (11,179)\\
+CFFO & 9,281 & 9,438 & 6,062\\
+Free cash flow & 5,322 & 4,249 & 2,927\\
+Net debt & 41,521 & 45,687 & 52,606\\
+Gearing & 18.7\% & 20.7\% & 23.2\%\\
+\bottomrule
+\end{tabularx}
+\tabsource{Source: Shell Q1 2026 quarterly databook (Shell and APM tabs).}
+
+% ================= DCF =================
+\section{Valuation: DCF}
+
+The DCF is built on normalised free cash flow (operating cash flow less cash capex), starting from \$28bn: the average of clean FCF in FY2021/23/24/25 (\$25.4bn, \$29.8bn, \$33.6bn, \$21.9bn), deliberately excluding the \$43.6bn windfall year of 2022. Growth in years one to five is held at zero: organic production declining roughly 1\% per year, offset by ARC volumes and cost programmes. The WACC of 8\% is built from a 4.4\% risk-free rate, 0.9 equity beta, 5\% equity risk premium (cost of equity 8.9\%) and \about3.5\% after-tax cost of debt at an 80/20 weighting. The distinctive assumption is terminal growth of $-1\%$: rather than the conventional positive perpetuity, the terminal business is assumed to shrink forever, explicitly encoding depletion and demand transition. This is intentionally harsher than most sell-side treatments of the sector. The result is fair value of approximately \textbf{3,800 GBX} per share, roughly 31\% above the market price.
+
+More telling than the point estimate is the sensitivity grid: fair value remains above the current price in every cell tested, including a 9\% discount rate combined with 2\% perpetual decline. A DCF that cannot reproduce the market price under any defensible assumption set implies either a systematic sector mispricing (consistent with documented institutional ESG-driven divestment flows suppressing European energy multiples) or a risk the model cannot see, the candidates being decline-phase capex escalation, decommissioning liabilities, and fat-tail transition scenarios. This report weights the first explanation more heavily but sets the price target below DCF fair value in respect of the second.
+
+\tabcaption{DCF assumptions (base case)}
+\begin{tabularx}{\textwidth}{@{}l r X@{}}
+\toprule
+\thead{Assumption} & \thead{Base case} & \thead{Rationale}\\
+\midrule
+Normalised FCF & \$28.0bn & Average clean FCF FY21/23/24/25; excludes 2022 windfall\\
+FCF growth, years 1--5 & 0.0\% & \about$-1$\%/yr organic decline offset by ARC volumes, cost cuts\\
+WACC & 8.0\% & CoE 8.9\% (4.4\% rf + 0.9 beta $\times$ 5\% ERP); after-tax CoD \about3.5\%; 80/20\\
+Terminal growth & $-1.0$\% & Perpetual decline encoding depletion (RRR $<$ 100\%)\\
+\textbf{Fair value} & \textbf{\about3,800 GBX} & vs 2,891.5 price $=$ \about31\% implied upside\\
+\bottomrule
+\end{tabularx}
+
+\tabcaption{Sensitivity: fair value per share (GBX), WACC (rows) against terminal growth (columns)}
+\begin{tabularx}{\textwidth}{@{}X r r r r@{}}
+\toprule
+\thead{WACC} & \thead{$-2.0$\%} & \thead{$-1.0$\%} & \thead{0.0\%} & \thead{$+1.0$\%}\\
+\midrule
+7.0\% & 3,952 & 4,372 & 4,911 & 5,630\\
+8.0\% & 3,477 & \textbf{3,800} & 4,204 & 4,724\\
+9.0\% & 3,088 & 3,343 & 3,654 & 4,044\\
+\bottomrule
+\end{tabularx}
+\tabsource{Author's model; historicals from Shell quarterly databook. Every cell exceeds the current price of 2,891.5 GBX.}
+
+% ================= COMPS =================
+\section{Valuation: peer comparison and the transition-risk screen}
+
+On consensus-based multiples Shell is the cheapest supermajor: \about4.8x EV/EBITDA versus BP \about5.0x, TotalEnergies \about6.4x and ExxonMobil \about11.8x, with the transatlantic gap (US majors at roughly double European multiples) the dominant pattern. Shell's \about12x trailing P/E compares with distorted trailing figures at BP (\about35x, depressed earnings) and forward P/Es clustering 8--12x across the group, in which Shell sits mid-pack despite the strongest LNG franchise. A re-rating merely to TotalEnergies' multiple would imply roughly 25\% upside before any operational improvement.
+
+Separately, the author's systematic transition-risk model, which scores 17 energy, mining, steel and utility names on carbon intensity (sector-normalised), fossil asset share and regulatory exposure, then raises each firm's discount rate accordingly and revalues on normalised cash flow, currently marks Shell approximately 12\% below fair value even after the transition penalty. Notably, the same screen marks BP as the deepest value in the universe, a useful discipline: within this framework Shell is attractive, not uniquely so. The convergence of three independent methods (screen: \about12\% cheap; DCF: \about31\% cheap; comps: \about25\% re-rating potential) at different magnitudes but identical sign is the core quantitative finding of this report.
+
+\tabcaption{Peer comparison (approximate, early July 2026)}
+\begin{tabularx}{\textwidth}{@{}X r r r r r@{}}
+\toprule
+ & \thead{Shell} & \thead{BP} & \thead{TotalEnergies} & \thead{ExxonMobil} & \thead{Chevron}\\
+\midrule
+EV/EBITDA & \about4.8x & \about5.0x & \about6.4x & \about11.8x & n/a\\
+P/E (trailing) & \about12x & \about35x* & \about13x & \about25x* & \about35x*\\
+Dividend yield & 3.8\% & \about4--5\% & \about5\% & 3.5\% & 4.5\%\\
+\bottomrule
+\end{tabularx}
+\tabsource{Sources: stockanalysis.com (S\&P Global data), Google Finance, company releases. *Trailing P/E distorted by impairments or weak trailing earnings; forward P/Es cluster 8--12x across the group.}
+
+% ================= CATALYSTS =================
+\section{Catalysts}
+
+\textbf{July 14, 2026 --- ARC Resources shareholder vote.} Approval removes deal uncertainty and restarts the paused buyback, mechanically restoring the stock's largest marginal buyer.
+
+\textbf{July 30, 2026 --- Q2 results.} A working-capital release confirming the mechanical reading of Q1 would directly rebut the cash-strain bear case.
+
+\textbf{H2 2026 --- logistics normalisation.} Unwinding of war-disrupted energy logistics reverses the inventory build.
+
+\textbf{Ongoing.} Each quarter of maintained distributions without further gearing increase compounds the sustainability argument; the LNG Canada ramp and Gorgon Stage 3 progress support medium-term Integrated Gas volumes.
+
+% ================= RISKS =================
+\section{Risks}
+
+\textbf{Commodity prices.} A sharp oil and gas downcycle would cut normalised FCF assumptions directly; the June 2026 Iran de-escalation shows how quickly war premia deflate.
+
+\textbf{Balance-sheet path.} If working capital does not release and gearing continues rising, the dividend and buyback framework loses credibility and the stock derates rather than rerates.
+
+\textbf{ARC execution.} Integration failure or a lost vote would waste a strategic answer to reserve decline.
+
+\textbf{Transition acceleration.} Policy shocks (carbon pricing, demand destruction faster than modelled) attack the terminal value in ways a smooth $-1\%$ growth rate cannot capture; the author's own transition model finds this risk real but currently over-priced.
+
+\textbf{Model risk.} Normalised FCF of \$28bn is a judgement over an unusually volatile five-year window including a pandemic recovery and two wars; the sensitivity grid, not the point estimate, is the honest output.
+
+% ================= CONCLUSION =================
+\section{Conclusion}
+
+Shell at \about2,900 GBX offers a \about10\% normalised free-cash-flow yield, the cheapest multiple among the supermajors, a definable catalyst path over the next thirty days, and a management team responding to its genuine structural problem (reserve decline) with balance-sheet-conscious action rather than denial. The bear case is real but largely priced; the mechanical Q1 cash distortion is treated by the market as structural. Initiate at \textbf{BUY}, price target \textbf{3,500 GBX} (+21\%), with the July 14 vote and July 30 results as near-term tests of the thesis.
+
+\vspace{10pt}
+{\color{rule}\hrule height 0.6pt}
+\vspace{4pt}
+{\sffamily\scriptsize\color{grey}\textit{Disclaimer: Independent student research prepared for educational purposes. Not investment advice, not a solicitation, and not produced for any employer or client. All data from public sources (company filings, quarterly databook, market data as of early July 2026); errors are the author's own.}}
+
+\end{document}
